@@ -22,7 +22,7 @@
           <td><%= image_tag beerpost.image.thumb.url.to_s %></td>
           <td><%= image_tag beerpost.beercolour.image.thumb.url.to_s, class: "circular" if beerpost.beercolour %></td>
           <td><%= beerpost.brewery.name if beerpost.brewery %></td>
-          <td><%= link_to 'Show', beerpost %> <%= link_to 'Edit', edit_beercolour_path(beerpost) %>
+          <td><%= link_to 'Show', beerpost %> <%= link_to 'Edit', edit_beerpost_path(beerpost) %>
           <%= link_to 'Destroy', beerpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
