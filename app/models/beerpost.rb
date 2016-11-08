@@ -5,5 +5,5 @@ class Beerpost < ApplicationRecord
   # For image uploading
   mount_uploader :image, ImageUploader
   # Validating the forms
-  validates :name, :image, presence: true
+  validates :name, :image, :beercolour_id, :brewery_id, presence: true
 end
