@@ -6,18 +6,18 @@
 </p>
 
 <p>
+  <strong>Image:</strong>
+  <%= simple_format image_tag @beerpost.image.thumb.url.to_s %>
+</p>
+
+<p>
   <strong>Colour:</strong>
-  <%= @beerpost.beercolour.name if @beerpost.beercolour %>
+  <%= simple_format image_tag @beerpost.beercolour.image.thumb.url.to_s, :class => "circular"  if @beerpost.beercolour %>
 </p>
 
 <p>
   <strong>Brewery:</strong>
   <%= @beerpost.brewery.name if @beerpost.brewery %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= simple_format image_tag @beerpost.image.thumb.url.to_s %>
 </p>
 
 <%= link_to 'Edit', edit_beerpost_path(@beerpost) %> |

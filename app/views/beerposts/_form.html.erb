@@ -18,12 +18,14 @@
 
   <div class="field">
     <%= f.label :beercolour, "Choose Colours" %>
-    <%= f.collection_check_boxes :beercolour_id, Beercolour.all, :id, :name, {prompt: "Choose a colour "} %>
+    <%= f.collection_radio_buttons(:beercolour_id, Beercolour.all, :id, :image) do |b| %>
+      <%= b.label { b.radio_button + image_tag(b.object.image.thumb.url, :class=>"circular") } %>
+    <% end %>
   </div>
 
   <div class="field">
     <%= f.label :brewery, "Choose Brewery" %>
-    <%= f.collection_select :brewery_id, Brewery.all, :id, :name, {prompt: "Choose a brewery "}  %>
+    <%= f.collection_check_boxes :brewery_id, Brewery.all, :id, :name, {prompt: "Choose a brewery "}  %>
   </div>
 
   <div class="field">

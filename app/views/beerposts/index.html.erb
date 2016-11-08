@@ -1,27 +1,32 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Beerposts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @beerposts.each do |beerpost| %>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+  <header>
+    <h1>Beer Reviews</h1>
+    <hr>
+  </header>
+  <table>
+  <%= link_to "Add", new_beerpost_path %>
+    <thead>
       <tr>
-        <td><%= beerpost.name %></td>
-        <td><%= link_to 'Show', beerpost %></td>
-        <td><%= link_to 'Edit', edit_beerpost_path(beerpost) %></td>
-        <td><%= link_to 'Destroy', beerpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name of Beer</th>
+        <th>Image of Beer</th>
+        <th>Colour for Beer</th>
+        <th>Brewery's Name</th>
+        <th>Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @beerposts.each do |beerpost| %>
+        <tr>
+          <td><%= beerpost.name %></td>
+          <td><%= image_tag beerpost.image.thumb.url.to_s %></td>
+          <td><%= image_tag beerpost.beercolour.image.thumb.url.to_s, class: "circular" %></td>
+          <td><%= beerpost.brewery.name if beerpost.brewery %></td>
+          <td><%= link_to 'Show', beerpost %> <%= link_to 'Edit', edit_beercolour_path(beerpost) %>
+          <%= link_to 'Destroy', beerpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Beerpost', new_beerpost_path %>
+</div>
