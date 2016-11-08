@@ -1,5 +1,5 @@
 class DodController < ApplicationController
   def index
-    @beerposts = Beerpost.all.limit(3).order("created_at desc")
+    @beerposts = Beerpost.all
   end
 end
