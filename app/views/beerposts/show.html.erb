@@ -7,7 +7,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= simple_format image_tag @beerpost.image.thumb.url.to_s %>
+  <%= simple_format image_tag @beerpost.image.thumb.url.to_s if @beerpost %>
 </p>
 
 <p>
