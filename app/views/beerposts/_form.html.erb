@@ -17,14 +17,14 @@
   </div>
 
   <div class="field">
-    <%= f.label :beercolour, "Choose Colours" %> <%= link_to new_beercolour_path %><br>
+    <%= f.label :beercolour, "Choose Colours" %> <%= link_to "Add Colour", new_beercolour_path %><br>
     <%= f.collection_radio_buttons(:beercolour_id, Beercolour.all, :id, :image) do |b| %>
       <%= b.label { b.radio_button + image_tag(b.object.image.thumb.url, :class=>"circular") } %>
     <% end %>
   </div>
 
   <div class="field">
-    <%= f.label :brewery, "Choose Brewery" %> <%= link_to new_brewery_path %><br>
+    <%= f.label :brewery, "Choose Brewery" %> <%= link_to "Add Brewery", new_brewery_path %><br>
     <%= f.collection_check_boxes :brewery_id, Brewery.all, :id, :name, {prompt: "Choose a brewery "}  %>
   </div>
 
