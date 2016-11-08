@@ -28,7 +28,7 @@ class BeercoloursController < ApplicationController
 
     respond_to do |format|
       if @beercolour.save
-        format.html { redirect_to @beercolour, notice: 'Beercolour was successfully created.' }
+        format.html { redirect_to beercolours_path, notice: 'Colour was successfully created.' }
         format.json { render :show, status: :created, location: @beercolour }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class BeercoloursController < ApplicationController
   def update
     respond_to do |format|
       if @beercolour.update(beercolour_params)
-        format.html { redirect_to @beercolour, notice: 'Beercolour was successfully updated.' }
+        format.html { redirect_to beercolours_path, notice: 'Colour was successfully updated.' }
         format.json { render :show, status: :ok, location: @beercolour }
       else
         format.html { render :edit }
@@ -69,6 +69,6 @@ class BeercoloursController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def beercolour_params
-      params.require(:beercolour).permit(:name)
+      params.require(:beercolour).permit(:name, :image)
     end
 end

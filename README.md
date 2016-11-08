@@ -12,6 +12,8 @@ This log for all the work has been done, including the stuff created, done and m
 * Add the relationship with brewery to the beer post
 * Add the styling back from the Bier V3
 * Add the code and styling for the index page
+* Add the image for the beer colour
+* Add the image for the beer post
 
 <--- Outdated Logs New Logs for Bier V3 --->
 # Nov 7, 2016

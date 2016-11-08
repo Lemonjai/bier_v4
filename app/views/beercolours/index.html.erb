@@ -1,27 +1,28 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Beercolours</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @beercolours.each do |beercolour| %>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+  <header>
+    <h1>Beer Colours</h1>
+    <hr>
+  </header>
+  <table>
+  <%= link_to "Add", new_beercolour_path %>
+    <thead>
       <tr>
-        <td><%= beercolour.name %></td>
-        <td><%= link_to 'Show', beercolour %></td>
-        <td><%= link_to 'Edit', edit_beercolour_path(beercolour) %></td>
-        <td><%= link_to 'Destroy', beercolour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name For Colour</th>
+        <th>Image For Colour</th>
+        <th>Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @beercolours.each do |beercolour| %>
+        <tr>
+          <td><%= beercolour.name %></td>
+          <td><%= image_tag beercolour.image.thumb.url.to_s, class: "circular" %></td>
+          <td><%= link_to 'Edit', edit_beercolour_path(beercolour) %>
+          <%= link_to 'Destroy', beercolour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Beercolour', new_beercolour_path %>
+</div>
