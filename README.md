@@ -5,6 +5,8 @@ This log for all the work has been done, including the stuff created, done and m
 <--- Bier V4 --->
 # Nov 8, 2016
 * Add the validation for the form and all information must be done before positng is allowed
+* Add the image upload for the brewery
+
 
 # Nov 7, 2016
 * Created the relationship model between the colour and the beer post

@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Image:</strong>
+  <%= simple_format image_tag @brewery.image.thumb.url.to_s if @brewery %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @brewery.name %>
 </p>
