@@ -18,7 +18,12 @@
 
   <div class="field">
     <%= f.label :beercolour, "Choose Colours" %>
-    <%= f.collection_select :beercolour_id, Beercolour.all, :id, :name, {prompt: "Choose a colour "}  %>
+    <%= f.collection_check_boxes :beercolour_id, Beercolour.all, :id, :name, {prompt: "Choose a colour "} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :brewery, "Choose Brewery" %>
+    <%= f.collection_select :brewery_id, Brewery.all, :id, :name, {prompt: "Choose a brewery "}  %>
   </div>
 
   <div class="actions">

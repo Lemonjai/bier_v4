@@ -2,12 +2,16 @@
 
 This log for all the work has been done, including the stuff created, done and modified.
 
-# Bier V4 
+<--- Bier V4 --->
 # Nov 7, 2016
 * Created the relationship model between the colour and the beer post
-*
+* Created the scaffold for the beerpost
+* Created the scaffold for the beercolour
+* Created the scaffold for the brewery
+* Add the relationship with colours to the beer post
+* Add the relationship with brewery to the beer post
 
-# Outdated Logs New Logs for Bier V3 
+<--- Outdated Logs New Logs for Bier V3 --->
 # Nov 7, 2016
 * Cannot use "belongs_to" or "has_many" relations
 * Will use back to scaffold method
