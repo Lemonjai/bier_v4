@@ -10,6 +10,8 @@ This log for all the work has been done, including the stuff created, done and m
 * Created the scaffold for the brewery
 * Add the relationship with colours to the beer post
 * Add the relationship with brewery to the beer post
+* Add the styling back from the Bier V3
+* Add the code and styling for the index page
 
 <--- Outdated Logs New Logs for Bier V3 --->
 # Nov 7, 2016
