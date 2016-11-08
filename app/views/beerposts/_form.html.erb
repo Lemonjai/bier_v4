@@ -25,7 +25,7 @@
 
   <div class="field">
     <%= f.label :brewery, "Choose Brewery" %> <%= link_to "Add Brewery", new_brewery_path %><br>
-    <%= f.collection_check_boxes :brewery_id, Brewery.all, :id, :name, {prompt: "Choose a brewery "}  %>
+    <%= f.collection_radio_buttons :brewery_id, Brewery.all, :id, :name, {prompt: "Choose a brewery "}  %>
   </div>
 
   <div class="field">
