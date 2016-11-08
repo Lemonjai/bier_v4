@@ -15,6 +15,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # Font awesome
 gem "font-awesome-rails"
+# Carrierwave for uploading image
+gem 'carrierwave'
+gem 'mini_magick'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

@@ -15,5 +15,10 @@
   <%= @beerpost.brewery.name if @beerpost.brewery %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <%= simple_format image_tag @beerpost.image.thumb.url.to_s %>
+</p>
+
 <%= link_to 'Edit', edit_beerpost_path(@beerpost) %> |
 <%= link_to 'Back', beerposts_path %>
