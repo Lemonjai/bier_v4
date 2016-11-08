@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @beerpost.name %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @beerpost.beercolour.name if @beerpost.beercolour %>
+</p>
+
+<%= link_to 'Edit', edit_beerpost_path(@beerpost) %> |
+<%= link_to 'Back', beerposts_path %>

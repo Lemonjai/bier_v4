@@ -1,0 +1,27 @@
+<%= form_for(beerpost) do |f| %>
+  <% if beerpost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(beerpost.errors.count, "error") %> prohibited this beerpost from being saved:</h2>
+
+      <ul>
+      <% beerpost.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :beercolour, "Choose Colours" %>
+    <%= f.collection_select :beercolour_id, Beercolour.all, :id, :name, {prompt: "Choose a colour "}  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

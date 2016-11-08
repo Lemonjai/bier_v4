@@ -1,0 +1,1 @@
+json.partial! "beerposts/beerpost", beerpost: @beerpost

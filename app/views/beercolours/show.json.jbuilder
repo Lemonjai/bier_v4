@@ -1,0 +1,1 @@
+json.partial! "beercolours/beercolour", beercolour: @beercolour

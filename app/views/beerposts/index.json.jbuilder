@@ -1,0 +1,1 @@
+json.array! @beerposts, partial: 'beerposts/beerpost', as: :beerpost
