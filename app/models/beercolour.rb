@@ -4,5 +4,5 @@ class Beercolour < ApplicationRecord
   # For image uploading
   mount_uploader :image, ImageUploader
   # Validating the forms
-  validates :name, presence: true
+  validates :name, :image, presence: true
 end
