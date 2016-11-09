@@ -7,6 +7,15 @@ This log for all the work has been done, including the stuff created, done and m
 * Add the validation for the form and all information must be done before positng is allowed
 * Add the image upload for the brewery
 
+Note: Need to add the brewery logo
+      Need to add the gallery
+      Need to add the users
+      Need to add the countries
+      Need to style for dashboard
+      Need to style for each page
+      Need to validate for post that one coomponent cannot be deleted if it is in use
+      Need to add swipe side bar for ppl posting
+      Need to add the search, views and share
 
 # Nov 7, 2016
 * Created the relationship model between the colour and the beer post
@@ -120,11 +129,3 @@ Notes: Sept 13, 2016
 
 
 ** Note everything has been uploaded into heroku service**
-
-"Priority list"
-=======================
-** Need to solved the selection to select multiple selection**
-** Need to figure add picture onto the application**
-** User favourite function **
-** User email function **
-** Need to add the sidemenu back for the mobile view **
