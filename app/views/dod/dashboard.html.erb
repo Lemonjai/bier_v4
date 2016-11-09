@@ -1,0 +1,87 @@
+<h1>Dashboard</h1>
+
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+  <header>
+    <h1>Beer Reviews</h1>
+    <hr>
+  </header>
+  <table>
+  <%= link_to "Add", new_beerpost_path %>
+    <thead>
+      <tr>
+        <th>Name of Beer</th>
+        <th>Image of Beer</th>
+        <th>Colour for Beer</th>
+        <th>Brewery's Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @beerposts.each do |beerpost| %>
+        <tr>
+          <td><%= beerpost.name %></td>
+          <td><%= image_tag beerpost.image.thumb.url.to_s %></td>
+          <td><%= image_tag beerpost.beercolour.image.thumb.url.to_s, class: "circular" if beerpost.beercolour %></td>
+          <td><%= beerpost.brewery.name if beerpost.brewery %></td>
+          <td><%= link_to 'Show', beerpost %> <%= link_to 'Edit', edit_beerpost_path(beerpost) %>
+          <%= link_to 'Destroy', beerpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <header>
+    <h1>Beer Colours</h1>
+    <hr>
+  </header>
+  <table>
+  <%= link_to "Add", new_beercolour_path %>
+    <thead>
+      <tr>
+        <th>Name For Colour</th>
+        <th>Image For Colour</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @beercolours.each do |beercolour| %>
+        <tr>
+          <td><%= beercolour.name %></td>
+          <td><%= image_tag beercolour.image.thumb.url.to_s, class: "circular" %></td>
+          <td><%= link_to 'Edit', edit_beercolour_path(beercolour) %>
+          <%= link_to 'Destroy', beercolour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<header>
+  <h1>Breweries</h1>
+  <hr>
+</header>
+<%= link_to 'Add', new_brewery_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @breweries.each do |brewery| %>
+      <tr>
+        <td><%= brewery.name %></td>
+        <td><%= brewery.address %></td>
+        <td><%= link_to 'Show', brewery %>
+        <%= link_to 'Edit', edit_brewery_path(brewery) %>
+        <%= link_to 'Destroy', brewery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>

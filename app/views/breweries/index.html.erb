@@ -1,13 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
 
-<h1>Breweries</h1>
-
+<header>
+  <h1>Breweries</h1>
+  <hr>
+</header>
+<%= link_to 'Add', new_brewery_path %>
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Address</th>
-      <th colspan="3"></th>
+      <th>Actions</th>
     </tr>
   </thead>
 
@@ -16,9 +19,9 @@
       <tr>
         <td><%= brewery.name %></td>
         <td><%= brewery.address %></td>
-        <td><%= link_to 'Show', brewery %></td>
-        <td><%= link_to 'Edit', edit_brewery_path(brewery) %></td>
-        <td><%= link_to 'Destroy', brewery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', brewery %>
+        <%= link_to 'Edit', edit_brewery_path(brewery) %>
+        <%= link_to 'Destroy', brewery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Brewery', new_brewery_path %>
+</div>

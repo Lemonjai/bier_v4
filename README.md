@@ -6,6 +6,7 @@ This log for all the work has been done, including the stuff created, done and m
 # Nov 8, 2016
 * Add the validation for the form and all information must be done before positng is allowed
 * Add the image upload for the brewery
+* Add the image size for thumbnail, mobile, tablet and desktop
 
 Note: Need to add the brewery logo
       Need to add the gallery
