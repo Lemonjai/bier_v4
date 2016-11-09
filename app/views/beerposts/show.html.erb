@@ -1,18 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+<div id="post_show_content">
   <header>
     <p class="date"><%= @beerpost.created_at.strftime('%A, %B, %d') %></p>
     <h1><%= @beerpost.name %></h1>
     <hr>
   </header>
 
-  
+  <div class="content skinny_wrapper">
     <%= image_tag @beerpost.image.desktop.url.to_s %><br>
     <strong>Colour:</strong><br>
     <%= image_tag @beerpost.beercolour.image.thumb.url.to_s, :class => "circular"  if @beerpost.beercolour %><br>
     <strong>Brewery:</strong><br>
     <p><%= @beerpost.brewery.name %></p>
+  </div>
 
   <div id="share_box">
       <p><%= link_to "Edit", edit_beerpost_path(@beerpost) %>
