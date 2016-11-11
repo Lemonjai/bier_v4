@@ -1,32 +1,31 @@
-<div id="post_show_content" class="skinny_wrapper wrapper_padding">
-  <header>
-    <h1>Beer Reviews</h1>
-    <hr>
-  </header>
-  <table>
+<p id="notice"><%= notice %></p>
+<div class="container" style="margin-top:10px;">
+  <h1>Beer Review</h1>
   <%= link_to "Add", new_beerpost_path %>
-    <thead>
-      <tr>
-        <th>Name of Beer</th>
-        <th>Image of Beer</th>
-        <th>Colour for Beer</th>
-        <th>Brewery's Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @beerposts.each do |beerpost| %>
-        <tr>
-          <td><%= beerpost.name %></td>
-          <td><%= image_tag beerpost.image.thumb.url.to_s %></td>
-          <td><%= image_tag beerpost.beercolour.image.thumb.url.to_s, class: "circular" if beerpost.beercolour %></td>
-          <td><%= beerpost.brewery.name if beerpost.brewery %></td>
-          <td><%= link_to 'Show', beerpost %> <%= link_to 'Edit', edit_beerpost_path(beerpost) %>
-          <%= link_to 'Destroy', beerpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
+  <div class="row form-group">
+    <% @beerposts.each do |beerpost| %>
+      <div class="col-xs-12 col-md-6 col-lg-4">
+        <div class="panel panel-default">
+          <div class="panel-image hide-panel-body">
+            <%= image_tag beerpost.image, :class => "panel-image-preview" %>
+          </div>
+          <div class="panel-body">
+            <h4><%= beerpost.name %></h4>
+            <h6>Brewery: <%= beerpost.brewery.name  if beerpost.brewery%></h6>
+            <h6>Colour: <%= image_tag beerpost.beercolour.image.thumb.url, :class => "circular" if beerpost.beercolour %> </h6>
+            <p><%= link_to "Read More", beerpost %></p>
+          </div>
+          <div class="panel-footer text-center">
+            <a href="#download"><span class="glyphicon glyphicon-download"></span></a>
+            <a href="#facebook"><span class="fa fa-facebook"></span></a>
+            <a href="#twitter"><span class="fa fa-twitter"></span></a>
+            <a href="#share"><span class="glyphicon glyphicon-share-alt"></span></a>
+            <%= link_to 'Show', beerpost %> <%= link_to 'Edit', edit_beerpost_path(beerpost) %>
+          <%= link_to 'Destroy', beerpost, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+          
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

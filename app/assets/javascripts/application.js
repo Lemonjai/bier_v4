@@ -12,5 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+// Note: 'turbolinks:load' work for Rails 5
+$(document).on('turbolinks:load', function() {
+  $('.panel-image img.panel-image-preview').on('click', function(e) {
+    $(this).closest('.panel-image').toggleClass('hide-panel-body');
+  });
+})

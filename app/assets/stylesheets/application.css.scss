@@ -16,6 +16,8 @@
  */
 
 @import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 $dark: #424652;
 $light: #9a9da4;
@@ -27,7 +29,7 @@ $white: #ffffff;
   box-sizing: border-box;
 }
 
-body {
+body,html {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -42,6 +44,8 @@ hr {
 
 .circular {
   border-radius: 50%;
+  height: 20px;
+  width: 20px;
 }
 
 .wrapper{
@@ -167,3 +171,4 @@ p, ul, ol {
 @import 'contact';
 @import 'table';
 @import 'posts_projects';
+@import 'panel';
