@@ -13,8 +13,7 @@
     <p class="alert"><%= alert %></p>
     <%= render 'layouts/navbar' %>
     <% if user_signed_in? %>
-      <% render 'dod/dashboard' %>
-      <%= yield :dashboard %>
+      
     <% else %>
       <%= yield %>
     <% end %>
