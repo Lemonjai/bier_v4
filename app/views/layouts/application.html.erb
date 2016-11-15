@@ -9,12 +9,11 @@
   </head>
 
   <body>
+    <%= render 'layouts/navbar' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render 'layouts/navbar' %>
     <% if user_signed_in? %>
-      <% render 'dod/dashboard' %>
-      <%= yield :dashboard %>
+      <%= yield %>
     <% else %>
       <%= yield %>
     <% end %>
