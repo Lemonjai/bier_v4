@@ -6,6 +6,7 @@ This log for all the work has been done, including the stuff created, done and m
 # Nov 11, 2016
 * Add the styling for the show page on the beer post
 * Add the styling for the index page on the beer post
+* Add the footer will always be at the bottom of the page
 
 # Nov 8, 2016
 * Add the validation for the form and all information must be done before positng is allowed
