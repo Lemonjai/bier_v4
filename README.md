@@ -3,6 +3,11 @@
 This log for all the work has been done, including the stuff created, done and modified.
 
 <--- Bier V4 --->
+# Nov 14, 2016
+* Add devise for user authentication
+* Working on the dashboard
+* Navbar changes when user sign in
+
 # Nov 11, 2016
 * Add the styling for the show page on the beer post
 * Add the styling for the index page on the beer post

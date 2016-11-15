@@ -20,6 +20,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'bootstrap-sass'
+
+gem 'devise'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

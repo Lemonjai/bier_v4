@@ -1,8 +1,14 @@
 <header id ="main_navigation" class="clearfix">
   <%= link_to "Disciples of Dionysus", root_path, :class=>"name" %>
   <nav>
-    <%= link_to "Articles", beerposts_path %>
-    <a href="#">Users</a>
-    <a href="#">Contact</a>
+    <% if user_signed_in? %>
+      <%= link_to "Dashboard", beerposts_path %>
+      <%= link_to "Settings", new_user_session_path %>
+      <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to "Articles", beerposts_path %>
+      <%= link_to "Users", new_user_session_path %>
+      <a href="#">Contact</a>
+    <% end %>
   </nav>
 </header>

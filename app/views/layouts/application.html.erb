@@ -9,8 +9,15 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= render 'layouts/navbar' %>
-    <%= yield %>
+    <% if user_signed_in? %>
+      <% render 'dod/dashboard' %>
+      <%= yield :dashboard %>
+    <% else %>
+      <%= yield %>
+    <% end %>
     <%= render 'layouts/footer' %>
   </body>
 </html>
