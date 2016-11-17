@@ -3,6 +3,9 @@
 This log for all the work has been done, including the stuff created, done and modified.
 
 <--- Bier V4 --->
+# Nov 15, 2016
+* 
+
 # Nov 14, 2016
 * Add devise for user authentication
 * Working on the dashboard
